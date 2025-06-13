@@ -1,0 +1,84 @@
+body {
+  background-color: #111;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-image: url('https://xatimg.com/image/93VQn1UBXO0F.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.pantalla-inicial {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: fixed;
+  z-index: 10;
+}
+
+.nick-inicial {
+  color: white;
+  font-size: 60px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+}
+
+.fuera-servicio {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: vibrar 0.1s linear infinite;
+  color: #fff;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+}
+
+@keyframes vibrar {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.nick {
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+}
+
+.foto-perfil {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto-perfil:active {
+  animation: fotoClick 0.5s ease-in-out;
+}
+
+@keyframes fotoClick {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
